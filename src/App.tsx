@@ -6,6 +6,7 @@ import { ErrorLine } from './components/ErrorLine'
 import { LoadingScreen } from './components/LoadingScreen'
 import { MusicPlayer } from './components/MusicPlayer'
 import { OpenMusicButton } from './components/OpenMusicButton'
+import { InstagramButton } from './components/InstagramButton'
 import { StatusScreen } from './components/StatusScreen'
 import { ThemeToggle } from './components/ThemeToggle'
 import { TrackList } from './components/TrackList'
@@ -206,16 +207,18 @@ function PlaylistExperience({ playlist }: { playlist: Playlist }) {
           </div>
 
           {playlistConfig.showOpenButton ? (
-            <div className="pointer-events-auto md:hidden">
+            <div className="pointer-events-auto flex items-center gap-2.5 md:hidden">
               <OpenMusicButton href={playlist.url} />
+              <InstagramButton href="https://www.instagram.com/clickzbyj/" />
             </div>
           ) : null}
         </div>
 
         {playlistConfig.showOpenButton ? (
           <div className="pointer-events-none absolute right-5 bottom-8 hidden md:right-8 md:block lg:right-10">
-            <div className="pointer-events-auto">
+            <div className="pointer-events-auto flex items-center gap-2.5">
               <OpenMusicButton href={playlist.url} />
+              <InstagramButton href="https://www.instagram.com/clickzbyj/" />
             </div>
           </div>
         ) : null}
